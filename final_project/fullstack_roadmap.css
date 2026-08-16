@@ -1,0 +1,58 @@
+body 
+{
+  margin: 0;
+  height: 100vh;
+ background:  rgb(3, 3, 45) ;
+ background-size: 800% 800%;
+  animation: gradientBG 10s ease infinite;  
+}
+@keyframes gradientBG 
+{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#title 
+{
+  color: rgb(164, 206, 12);
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 50px;
+}
+
+.phase 
+{
+  color: #fff;
+  padding: 20px 30px;
+  margin: 30px;
+  float: left;
+  border-radius: 30px;
+  background: transparent;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255 , 0.2);
+  box-shadow: 0 0 0 0 yellow;
+
+}
+.phase h2 
+{
+  color: rgb(0, 195, 255);
+  font-weight: bold;
+}
+li a
+{
+    text-decoration: none;
+    color: yellow;
+    justify-content: space-between;
+}

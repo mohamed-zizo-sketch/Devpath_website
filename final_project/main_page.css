@@ -1,0 +1,200 @@
+/* ---------- GLOBAL ---------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Stack Sans Notch", sans-serif;
+  color: #fff;
+}
+
+:root {
+  --primary: #00f7ff;
+  --text: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-blur: blur(12px);
+}
+
+/* Background */
+#vantabg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.logo .subtitle {
+  margin: 5px 0 0;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  padding: 10px 25px;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0 10px 0 0;
+  gap: 20px;
+}
+
+nav li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+nav li a:hover {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+/* ---------- TRACKS TITLE ---------- */
+.tracks {
+  margin-top: 150px;
+  padding-left: 40px;
+}
+
+.tracks h2 {
+  font-size: 26px;
+  margin: 0;
+}
+
+/* ---------- CAROUSEL ---------- */
+.carousel {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+  padding: 40px;
+  flex-wrap: wrap;
+    backdrop-filter: var(--glass-blur);
+
+}
+
+.card {
+  width: 220px;
+  height: 320px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.card a 
+{
+  text-decoration: none;
+  color: #fff;
+}
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card.active {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 25px var(--primary));
+}
+
+/* Carousel Buttons */
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button.prev:hover, button.next:hover {
+  background: var(--primary);
+}
+
+button.prev {
+   left: 20px; 
+  }
+button.next { right: 20px; }
+
+/* ---------- ABOUT SECTION ---------- */
+.about {
+  padding: 60px 40px;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ---------- CONTACT SECTION ---------- */
+.contact {
+  padding: 60px 40px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 10px;
+  }
+
+  .carousel {
+    padding: 20px;
+  }
+
+  .card {
+    width: 180px;
+    height: 280px;
+  }
+}

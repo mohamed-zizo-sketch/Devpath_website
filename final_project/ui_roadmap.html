@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UX/UI Designer Roadmap</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        :root {
+
+            --primary: #1e3a8a;      /* Dark Blue */
+
+            --secondary: #3b82f6;    /* Medium Blue */
+
+            --accent: #60a5fa;       /* Light Blue */
+
+            --yellow: #fbbf24;       /* Yellow */
+
+            --yellow-light: #fde68a; /* Light Yellow */
+
+            --light: #f0f9ff;
+
+        }
+
+        
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+
+        }
+
+        
+
+        body {
+
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+
+            color: white;
+
+            line-height: 1.6;
+
+            padding: 20px;
+
+            min-height: 100vh;
+
+        }
+
+        
+
+        .container {
+
+            max-width: 900px;
+
+            margin: 0 auto;
+
+        }
+
+        
+
+        header {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+
+            padding: 25px;
+
+            background: linear-gradient(90deg, var(--primary), #1e40af);
+
+            border-radius: 15px;
+
+            border: 2px solid var(--yellow);
+
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+
+        }
+
+        
+
+        header h1 {
+
+            color: var(--yellow);
+
+            margin-bottom: 15px;
+
+            font-size: 2.3rem;
+
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+        }
+
+        
+
+        header p {
+
+            color: #e2e8f0;
+
+            font-size: 1.1rem;
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+        }
+
+        
+
+        .timeline {
+
+            background: rgba(30, 58, 138, 0.2);
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            margin-bottom: 35px;
+
+            border: 1px solid rgba(59, 130, 246, 0.2);
+
+        }
+
+        
+
+        .timeline h2 {
+
+            text-align: center;
+
+            margin-bottom: 25px;
+
+            color: var(--yellow);
+
+            font-size: 1.5rem;
+
+        }
+
+        
+
+        .timeline-steps {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+        }
+
+        
+
+        .timeline-step {
+
+            text-align: center;
+
+            flex: 1;
+
+        }
+
+        
+
+        .step-circle {
+
+            width: 60px;
+
+            height: 60px;
+
+            background: var(--yellow);
+
+            border-radius: 50%;
+
+            margin: 0 auto 15px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: bold;
+
+            font-size: 1.3rem;
+
+            color: #1e293b;
+
+            box-shadow: 0 4px 10px rgba(251, 191, 36, 0.3);
+
+        }
+
+        
+
+        .step-title {
+
+            color: #e2e8f0;
+
+            font-weight: 600;
+
+        }
+
+        
+
+        .phases {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 25px;
+
+            margin-bottom: 40px;
+
+        }
+
+        
+
+        .phase {
+
+            background: rgba(30, 58, 138, 0.3);
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            border: 2px solid rgba(59, 130, 246, 0.3);
+
+            transition: all 0.3s;
+
+        }
+
+        
+
+        .phase:hover {
+
+            transform: translateY(-8px);
+
+            border-color: var(--yellow);
+
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.2);
+
+        }
+
+        
+
+        .phase-header {
+
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+
+            padding: 25px;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+
+            border-bottom: 2px solid var(--yellow);
+
+        }
+
+        
+
+        .phase-number {
+
+            background: var(--yellow);
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: bold;
+
+            font-size: 1.3rem;
+
+            color: #1e293b;
+
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+
+        }
+
+        
+
+        .phase-content {
+
+            padding: 25px;
+
+        }
+
+        
+
+        .phase-content p {
+
+            color: #cbd5e1;
+
+            margin-bottom: 20px;
+
+            font-size: 1.05rem;
+
+        }
+
+        
+
+        .skills {
+
+            list-style: none;
+
+            margin-bottom: 20px;
+
+        }
+
+        
+
+        .skills li {
+
+            padding: 12px 0;
+
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            color: #e2e8f0;
+
+        }
+
+        
+
+        .skills li:last-child {
+
+            border-bottom: none;
+
+        }
+
+        
+
+        .skills i {
+
+            color: var(--yellow);
+
+            font-size: 1.3rem;
+
+        }
+
+        
+
+        .tools {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 20px;
+
+        }
+
+        
+
+        .tool {
+
+            background: rgba(251, 191, 36, 0.1);
+
+            padding: 8px 15px;
+
+            border-radius: 20px;
+
+            font-size: 0.9rem;
+
+            color: var(--yellow);
+
+            border: 1px solid rgba(251, 191, 36, 0.3);
+
+            transition: all 0.3s;
+
+        }
+
+        
+
+        .tool:hover {
+
+            background: rgba(251, 191, 36, 0.2);
+
+            transform: translateY(-2px);
+
+        }
+
+        
+
+        footer {
+
+            text-align: center;
+
+            padding: 25px;
+
+            background: rgba(30, 58, 138, 0.2);
+
+            border-radius: 15px;
+
+            color: var(--yellow-light);
+
+            border: 1px solid rgba(59, 130, 246, 0.2);
+
+        }
+
+        
+
+        footer p {
+
+            font-size: 1.1rem;
+
+            margin-bottom: 10px;
+
+        }
+
+        
+
+        @media (max-width: 768px) {
+
+            .timeline-steps {
+
+                flex-direction: column;
+
+                gap: 25px;
+
+            }
+
+            
+
+            header h1 {
+
+                font-size: 1.8rem;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1><i class="fas fa-palette" style="color: var(--yellow);"></i> UX/UI Designer Roadmap</h1>
+
+            <p>A simple and easy pathway to enter the UX/UI design field in 3 phases</p>
+
+            <p style="color: var(--yellow-light); margin-top: 10px; font-size: 1rem;">
+
+                🎨 Start your journey towards professionalism today!
+
+            </p>
+
+        </header>
+
+        
+
+        <section class="timeline">
+
+            <h2>⏱️ Learning Timeline</h2>
+
+            <div class="timeline-steps">
+
+                <div class="timeline-step">
+
+                    <div class="step-circle">1-2</div>
+
+                    <div class="step-title">Months<br>UX Basics</div>
+
+                </div>
+
+                <div class="timeline-step">
+
+                    <div class="step-circle">2-3</div>
+
+                    <div class="step-title">Months<br>UI Design</div>
+
+                </div>
+
+                <div class="timeline-step">
+
+                    <div class="step-circle">1-2</div>
+
+                    <div class="step-title">Months<br>Professional</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        
+
+        <div class="phases">
+
+            <!-- Phase 1 -->
+
+            <div class="phase">
+
+                <div class="phase-header">
+
+                    <div class="phase-number">1</div>
+
+                    <h3 style="color: var(--yellow-light);">UX Design Fundamentals</h3>
+
+                </div>
+
+                <div class="phase-content">
+
+                    <p>Start by learning the basic principles of user experience design and understanding user behavior and needs.</p>
+
+                    <ul class="skills">
+
+                        <li><i class="fas fa-check-circle"></i> Understanding UX principles and difference between UX and UI</li>
+
+                        <li><i class="fas fa-check-circle"></i> Learning Design Thinking process step by step</li>
+
+                        <li><i class="fas fa-check-circle"></i> Conducting User Research</li>
+
+                        <li><i class="fas fa-check-circle"></i> Creating User Personas</li>
+
+                    </ul>
+
+                    <div class="tools">
+
+                        <span class="tool">Figma</span>
+
+                        <span class="tool">Adobe XD</span>
+
+                        <span class="tool">Miro</span>
+
+                        <span class="tool">Paper & Pen</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+            <!-- Phase 2 -->
+
+            <div class="phase">
+
+                <div class="phase-header">
+
+                    <div class="phase-number">2</div>
+
+                    <h3 style="color: var(--yellow-light);">UI Design & Visual Design</h3>
+
+                </div>
+
+                <div class="phase-content">
+
+                    <p>Learn to design beautiful and interactive interfaces that attract users and provide an enjoyable visual experience.</p>
+
+                    <ul class="skills">
+
+                        <li><i class="fas fa-check-circle"></i> Learning visual design principles (color, typography, spacing)</li>
+
+                        <li><i class="fas fa-check-circle"></i> Creating Design Systems</li>
+
+                        <li><i class="fas fa-check-circle"></i> Designing High-fidelity mockups</li>
+
+                        <li><i class="fas fa-check-circle"></i> Creating interactive prototypes</li>
+
+                    </ul>
+
+                    <div class="tools">
+
+                        <span class="tool">Figma</span>
+
+                        <span class="tool">Sketch</span>
+
+                        <span class="tool">Illustrator</span>
+
+                        <span class="tool">Photoshop</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+            <!-- Phase 3 -->
+
+            <div class="phase">
+
+                <div class="phase-header">
+
+                    <div class="phase-number">3</div>
+
+                    <h3 style="color: var(--yellow-light);">Professional Tools & Real Projects</h3>
+
+                </div>
+
+                <div class="phase-content">
+
+                    <p>Enhance your skills, learn professional tools, and start building real projects to enter the job market.</p>
+
+                    <ul class="skills">
+
+                        <li><i class="fas fa-check-circle"></i> Usability Testing</li>
+
+                        <li><i class="fas fa-check-circle"></i> Collaboration with developers (learning HTML/CSS basics)</li>
+
+                        <li><i class="fas fa-check-circle"></i> Building professional portfolio</li>
+
+                        <li><i class="fas fa-check-circle"></i> Working on real projects (Case Studies)</li>
+
+                    </ul>
+
+                    <div class="tools">
+
+                        <span class="tool">Zeplin</span>
+
+                        <span class="tool">Framer</span>
+
+                        <span class="tool">Notion</span>
+
+                        <span class="tool">GitHub</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+        <footer>
+
+            <p>🚀 Start your journey today and follow the phases in order!</p>
+
+            <p style="color: var(--yellow); font-size: 1rem;">
+
+                <i class="fas fa-star" style="color: var(--yellow);"></i>
+
+                Every step brings you closer to your goal
+
+                <i class="fas fa-star" style="color: var(--yellow);"></i>
+
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

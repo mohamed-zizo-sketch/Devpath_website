@@ -1,0 +1,318 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Roadmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: rgb(3, 3, 45);
+            color: rgb(0, 195, 255);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: rgb(0, 195, 255);
+            text-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgb(0, 195, 255);
+        }
+
+        .phase-title {
+            color: rgb(0, 195, 255);
+            margin: 30px 0 20px;
+            font-size: 1.8rem;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(0, 195, 255, 0.1);
+        }
+
+        .phase-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        .phase {
+            background-color: rgba(0, 195, 255, 0.05);
+            border: 1px solid rgba(0, 195, 255, 0.3);
+            border-radius: 10px;
+            padding: 25px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 380px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .phase h3 {
+            color: rgb(0, 195, 255);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 195, 255, 0.3);
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+        }
+
+        .phase-icon {
+            margin-right: 10px;
+            font-size: 1.6rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        li:before {
+            content: "•";
+            color: rgba(248, 248, 0, 0.975);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .highlight {
+            background-color: rgba(248, 248, 0, 0.1);
+            border-left: 4px solid rgba(248, 248, 0, 0.975);
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
+            margin: 15px 0;
+            font-weight: bold;
+            color: rgba(248, 248, 0, 0.975);
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+            justify-content: center;
+        }
+
+        .button {
+            background-color: rgba(248, 248, 0, 0.975);
+            color: rgb(3, 3, 45);
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .button:hover {
+            background-color: rgba(248, 248, 0, 1);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 195, 255, 0.2);
+            color: rgba(0, 195, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .phase-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .phase {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .button {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Analyst Roadmap: 3 Phases</h1>
+
+        <!-- PHASE 1 -->
+        <div class="phase-title">Phase 1: Foundation</div>
+        <div class="phase-container">
+            <div class="phase">
+                <h3><span class="phase-icon">📊</span> Statistics & Excel</h3>
+                <div class="highlight">Descriptive Statistics & Pivot Tables</div>
+                <ul>
+                    <li>Mean, Median, Standard Deviation</li>
+                    <li>Probability & Distributions</li>
+                    <li>Excel Mastery: Pivot Tables, VLOOKUP</li>
+                    <li>Data Cleaning & Formatting</li>
+                    <li>Basic Charts & Dashboards</li>
+                    <li>Data Types & Measurement Scales</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h3><span class="phase-icon">🗄️</span> SQL Fundamentals</h3>
+                <div class="highlight">SELECT, WHERE, JOINs, GROUP BY</div>
+                <ul>
+                    <li>Database Concepts & Design</li>
+                    <li>Basic Queries: SELECT, WHERE, ORDER BY</li>
+                    <li>Aggregation: GROUP BY, HAVING</li>
+                    <li>JOINs: INNER, LEFT, RIGHT</li>
+                    <li>Subqueries & Views</li>
+                    <li>Data Filtering & Sorting</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PHASE 2 -->
+        <div class="phase-title">Phase 2: Technical Skills</div>
+        <div class="phase-container">
+            <div class="phase">
+                <h3><span class="phase-icon">🐍</span> Python for Data</h3>
+                <div class="highlight">Pandas, NumPy, Visualization</div>
+                <ul>
+                    <li>Python Basics: Variables, Loops, Functions</li>
+                    <li>Pandas for Data Manipulation</li>
+                    <li>NumPy for Numerical Operations</li>
+                    <li>Data Cleaning with Python</li>
+                    <li>Matplotlib & Seaborn for Charts</li>
+                    <li>Exploratory Data Analysis (EDA)</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h3><span class="phase-icon">📈</span> Visualization & BI Tools</h3>
+                <div class="highlight">Tableau / Power BI</div>
+                <ul>
+                    <li>Dashboard Design Principles</li>
+                    <li>Data Connection & Modeling</li>
+                    <li>Interactive Visualizations</li>
+                    <li>Filters & Parameters</li>
+                    <li>Calculated Fields & Measures</li>
+                    <li>Sharing & Publishing Dashboards</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h3><span class="phase-icon">⚡</span> Advanced SQL</h3>
+                <div class="highlight">CTEs, Window Functions, Optimization</div>
+                <ul>
+                    <li>Common Table Expressions (CTEs)</li>
+                    <li>Window Functions: ROW_NUMBER, RANK</li>
+                    <li>CASE Statements</li>
+                    <li>Query Performance Tuning</li>
+                    <li>Stored Procedures Basics</li>
+                    <li>Date & Time Functions</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PHASE 3 -->
+        <div class="phase-title">Phase 3: Professional Skills</div>
+        <div class="phase-container">
+            <div class="phase">
+                <h3><span class="phase-icon">🚀</span> Projects & Portfolio</h3>
+                <div class="highlight">Real Projects & GitHub</div>
+                <ul>
+                    <li>End-to-End Analysis Projects</li>
+                    <li>Sales & Marketing Dashboards</li>
+                    <li>Customer Segmentation Analysis</li>
+                    <li>GitHub Portfolio with Clean Code</li>
+                    <li>Project Documentation</li>
+                    <li>Kaggle Competition Participation</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h3><span class="phase-icon">💼</span> Job Preparation</h3>
+                <div class="highlight">Interviews & Communication</div>
+                <ul>
+                    <li>SQL Case Studies Practice</li>
+                    <li>Technical Interview Questions</li>
+                    <li>Data Storytelling Techniques</li>
+                    <li>Resume & LinkedIn Optimization</li>
+                    <li>Business Communication Skills</li>
+                    <li>Mock Interviews & Networking</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="button">📚 Start Learning Plan</button>
+            <button class="button">📥 Download Roadmap</button>
+            <button class="button">👨‍💻 Portfolio Examples</button>
+        </div>
+
+        <div class="footer">
+            <p>Data Analyst Roadmap | Simplified 3-Phase Version | Updated 2024</p>
+            <p>© 2024 Data Career Pathways | Focus on core skills & practical application</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('click', function() {
+                const actions = {
+                    '📚 Start Learning Plan': 'Redirecting to learning resources...',
+                    '📥 Download Roadmap': 'Downloading simplified roadmap...',
+                    '👨‍💻 Portfolio Examples': 'Opening portfolio examples...'
+                };
+                alert(actions[this.textContent] || `Action: ${this.textContent}`);
+            });
+        });
+        
+        document.querySelectorAll('.phase').forEach(phase => {
+            phase.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(0, 195, 255, 0.2)';
+            });
+            
+            phase.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
+            });
+        });
+    </script>
+</body>
+</html>
+```
+
+ 
